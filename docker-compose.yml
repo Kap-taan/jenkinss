@@ -8,6 +8,8 @@ services:
       - "3000:3000"
     networks:
       - jenkins_services
+    environment:
+      - DOCKER_TLS_VERIFY=0
   pubscrap:
     build: ./Pub-Scrap
     container_name: pubscrap_c
@@ -15,6 +17,8 @@ services:
       - "4000:4000"
     networks:
       - jenkins_services
+    environment:
+      - DOCKER_TLS_VERIFY=0
 networks:
   jenkins_services:
     driver: bridge
