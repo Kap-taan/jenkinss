@@ -23,3 +23,13 @@
 ```bash
 npm start
 ```
+
+/var/jenkins_home/workspace/jenkinss
+
+ERROR: open /var/jenkins_home/.docker/ca.pem: no such file or directory
+
+docker run --name jenkins-blueocean --restart=on-failure --detach \
+ --network jenkins \
+ --volume jenkins-data:/var/jenkins_home \
+ --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.414.2
+myjenkins-blueocean:2.414.2
