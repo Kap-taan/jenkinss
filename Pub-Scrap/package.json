@@ -1,0 +1,31 @@
+{
+  "name": "pub-scrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && node dist/index.js mumbai ./inputData true false false",
+    "start": "node dist/index.js mumbai ./inputData false false false"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.556.0",
+    "@turf/turf": "^6.5.0",
+    "aws-sdk": "^2.1604.0",
+    "cheerio": "^1.0.0-rc.12",
+    "jsdom": "^24.0.0",
+    "mysql2": "^3.9.7",
+    "puppeteer": "^22.6.4",
+    "puppeteer-core": "^22.6.4",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

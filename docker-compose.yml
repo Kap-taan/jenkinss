@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  dockerrunner:
+    build: ./docker-runner
+    container_name: dockerrunner_c
+    ports:
+      - "3000:3000"
+    networks:
+      - jenkins_services
+  pubscrap:
+    build: ./Pub-Scrap
+    container_name: pubscrap_c
+    ports:
+      - "4000:4000"
+    networks:
+      - jenkins_services
+networks:
+  jenkins_services:
+    driver: bridge
